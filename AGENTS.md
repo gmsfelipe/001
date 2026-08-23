@@ -30,6 +30,8 @@ policy lives in `CONTRIBUTING.md`.
 
 ## GitHub Workflow
 
+- `origin` is this project's GitHub repository; `upstream` is the read-only
+  public source used for comparison and selective updates.
 - Use a short-lived branch named `codex/<work-item>`.
 - Open a pull request instead of pushing changes directly to the default branch.
 - Use the task template to record scope, acceptance criteria, and guardrails.
