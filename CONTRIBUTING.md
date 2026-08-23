@@ -41,3 +41,10 @@ Add your skill to the end of the relevant category in `README.md`:
 - Check existing issues and PRs first
 - Open a new issue for questions
 - Visit the skill's own repo for skill-specific help
+
+## Agent-assisted contributions
+
+For work performed with Codex or another coding agent, follow the
+[Codex + GitHub workflow](docs/codex-github-workflow.md). It keeps tasks
+bounded, requires reviewable pull requests, and records the validation that was
+performed.
