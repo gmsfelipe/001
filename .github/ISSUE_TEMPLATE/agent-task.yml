@@ -1,0 +1,39 @@
+name: Agent maintenance task
+description: Create a bounded, reviewable task for Codex or another coding agent.
+title: "agent: "
+labels:
+  - agent-task
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: State the outcome, not just an activity.
+      placeholder: Add the official skill link for ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Name the sections, files, or repositories that are in scope.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable conditions that define completion.
+      placeholder: |
+        - Link resolves to the official source
+        - Entry follows CONTRIBUTING.md format
+    validations:
+      required: true
+  - type: textarea
+    id: guardrails
+    attributes:
+      label: Guardrails
+      description: List actions that require approval or must not be taken.
+      placeholder: Do not install or execute third-party code.
+    validations:
+      required: true

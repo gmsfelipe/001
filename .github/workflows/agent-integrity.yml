@@ -1,0 +1,25 @@
+name: Agent integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repository-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository contract
+        shell: bash
+        run: |
+          test -f README.md
+          test -f CONTRIBUTING.md
+          test -f AGENTS.md
+          grep -q '^# Awesome Agent Skills' README.md
+          grep -q '^# Contributing to Awesome Agent Skills' CONTRIBUTING.md
